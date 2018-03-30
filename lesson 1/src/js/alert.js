@@ -18,3 +18,5 @@ alert('Бюджет на 1 день: ' + money/30);
 console.log(mainList);
 
 
+
+
