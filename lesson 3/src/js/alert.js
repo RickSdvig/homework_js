@@ -66,9 +66,9 @@ function workTime(time) {
 	} else if(time > 8 && time <20){
 		console.log('Время работать!')
 	} else if (time < 24) {
-		console.log('Уже слишком поздно!')
+		console.log('Уже слишком поздно!');
 	} else {
-		console.log('В сутках 24 часа!')
+		console.log('В сутках 24 часа!');
 	}
 }
 
