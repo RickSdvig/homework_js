@@ -174,6 +174,7 @@ let mainList = {
 
  	  mainList.shopItems.forEach(function(item,i,arr) {
  	  	i++;
+	    alert("У нас вы можете купить: " + item);
 	    console.log("У нас вы можете купить: " + i + " - " + item);
    });
 
@@ -183,6 +184,10 @@ let mainList = {
 
 };
 
+console.log('Наш магазин включает в себя: ');
+for (let key in mainList){
+	  console.log('Товар: ' + key)
+}
 
 mainList.chooseGoods();
 mainList.countBudget();
