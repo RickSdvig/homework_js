@@ -22,6 +22,8 @@ document.body.replaceChild(heart, circle); // заменяет второе на
 div.innerHTML = 'Hello world!'; // выводит текст в центре блока div
 div.textContent = 'Hello world!'; // выводит текст в центре блока div, НО только ТЕКСТ
 */
+/*Пусть комменты останутся, пожалуйста.
+Мне вспоминать материал легче так, чтобы видео не пересматривать*/
 let menu = document.querySelector('.menu'),
     menuItem = document.querySelectorAll('.menu-item'),
     li = document.querySelector('li'),
@@ -39,9 +41,11 @@ li.classList.add("menu-item");
 menu.appendChild(li);
 column[1].removeChild(adv);
 title.textContent = 'Подлинную';
+
+
 a = prompt("Как вам apple?", "Если только по-фоткать");
 while(typeof(a) !== 'string' || typeof(a) == null || ''){
-	aa = prompt("Добавьте еще один товар", "Фирари");
+	a = prompt("Как вам apple?", "Если только по-фоткать");
 }
 
 question.textContent = a;
