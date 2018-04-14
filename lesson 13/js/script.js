@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
  // timer
 
- let deadline = '2018-04-09';
+ let deadline = '2018-04-15';
 
  function getTimeRemaining(endtime) {
  	  let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -229,7 +229,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function showSlides(n) {
 
         if (n > slides.length) {
-            slidesIndex = 1;
+            slideIndex = 1;
         };
         if (n < 1) {
             slideIndex = slides.length;
@@ -245,7 +245,7 @@ window.addEventListener('DOMContentLoaded', () => {
         };
 
         slides[slideIndex - 1].style.display = 'block';
-        dot[slideIndex - 1].classList.add('dot-active')
+        dot[slideIndex - 1].classList.add('dot-active');
 
 
     };
@@ -289,8 +289,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
         totalValue.innerHTML = 0;
 
+
+
         persons.addEventListener('change', function() {
             personsSum = +this.value;
+
+            if (personsSum < 0) {
+                personsSum = personsSum * -1;
+                
+                persons.value = personsSum;
+                
+            }
+
+            
+            
+
+
             total = (daysSum + personsSum)*4000;
             totalValue.innerHTML = total;
             if (restDays.value == ''){
@@ -302,8 +316,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
         restDays.addEventListener('change', function() {
            daysSum = +this.value;
+
+           if (daysSum < 0) {
+                daysSum = daysSum * -1;
+                restDays.value = daysSum;
+            }
+
+
            total = (daysSum + personsSum)*4000;
            totalValue.innerHTML = total;
+
            if (persons.value == ''){
                totalValue.innerHTML = 0;
            } else {
@@ -323,6 +345,7 @@ window.addEventListener('DOMContentLoaded', () => {
      
 
  });
+
 
 
 
